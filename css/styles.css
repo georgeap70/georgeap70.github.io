@@ -190,6 +190,27 @@ h2 {
     text-decoration: none;
 }
 
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.project-meta .date {
+    background-color: #4dabf7;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.project-meta .collaborators {
+    color: #4dabf7;
+    font-style: italic;
+}
+
 /* Contact section */
 .contact-content {
     max-width: 600px;
@@ -456,4 +477,65 @@ footer {
 
 .profile-image:hover .hero-image {
     transform: scale(1.1);
+}
+
+/* Thoughts Page Styles */
+.thoughts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.thought-post {
+    background: #2d2d2d;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.thought-post header {
+    margin-bottom: 2rem;
+}
+
+.thought-post h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.thought-post time {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+.thought-content {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.thought-content p {
+    margin-bottom: 1.5rem;
+}
+
+.thought-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.thought-content li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .thoughts-container {
+        padding: 1rem;
+    }
+
+    .thought-post {
+        padding: 1.5rem;
+    }
+
+    .thought-post h1 {
+        font-size: 2rem;
+    }
 } 

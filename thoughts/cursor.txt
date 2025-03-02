@@ -1,0 +1,25 @@
+How Cursor Will Transform AppSec
+
+March 1, 2025 
+
+I've been using Cursor recently, and it slowly dawned on me that AI-enabled IDEs will become the new UX for everything related to code—most critically, Application Security (AppSec).
+
+Until now, IDEs have been seen as the exclusive domain of developers, leaving AppSec professionals struggling to engage effectively within them. But that’s changing. The modern AI-powered IDE introduces a capable agent that can fulfill the needs of AppSec teams just as effectively as it does for developers.
+
+With this shift, AppSec professionals can:
+
+    Ask direct questions about the code.
+    Search for vulnerabilities when SAST findings are reported.
+    Gather additional context and make informed security decisions.
+
+This alone is a huge step forward. But the final transformation of AI-powered IDEs into the true home of AppSec will come when they integrate core security workflows, such as:
+
+    Reviewing security findings and alerts.
+    Creating PRs based on findings.
+    Defining policies for when to ignore or escalate issues.
+
+All of these will likely be handled through specialized prompts and instructions given to the IDE’s agent. Cursor's .mcp files mark just the beginning of enabling custom security workflows, and its Bug Finder page already serves as a centralized list of findings to review.
+
+This is going to be game-changing. If Cursor’s rapid adoption is any indication, this shift will happen fast—and many AppSec vendors may be caught completely by surprise.
+
+(lightly edited by ChatGPT)
