@@ -26,10 +26,31 @@ body {
     z-index: 1000;
 }
 
+.nav-brand-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .nav-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
+}
+
+.nav-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-social a {
+    color: #e0e0e0;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.nav-social a:hover {
+    color: #4dabf7;
 }
 
 .nav-menu {
@@ -42,6 +63,7 @@ body {
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .nav-menu li a:hover {
@@ -311,6 +333,10 @@ footer {
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .nav-social {
+        display: none; /* Hide social icons on mobile */
     }
 }
 
