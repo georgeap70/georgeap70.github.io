@@ -564,4 +564,82 @@ footer {
     .thought-post h1 {
         font-size: 2rem;
     }
+}
+
+.thoughts-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.thought-preview {
+    background-color: #2d2d2d;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thought-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.thought-preview header {
+    margin-bottom: 1rem;
+}
+
+.thought-preview h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.thought-preview h1 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.thought-preview h1 a:hover {
+    color: #4dabf7;
+}
+
+.thought-preview time {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.thought-excerpt {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.thought-excerpt p {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: #4dabf7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #339af0;
+}
+
+@media (max-width: 768px) {
+    .thoughts-list {
+        padding: 1rem;
+    }
+    
+    .thought-preview {
+        padding: 1.5rem;
+    }
+    
+    .thought-preview h1 {
+        font-size: 1.5rem;
+    }
 } 
