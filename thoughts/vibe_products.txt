@@ -1,0 +1,36 @@
+Is it the time of "Vibe Products"? 
+
+March 4, 2025 
+
+LLMs, Agents and everything AI is pretty hard to evaluate. For one, the results of LLMs are not always deterministic. 
+In addition, there are so many different use cases to evaluate these on, and in some of these the quality of the 
+results is quite subjective anyway. This has led us to "vibe" checks. The famous Adrej Karpathy is thought to be 
+the first to use this term in the context of AI. Now, when new LLMs are released, folks run few of their favorite 
+use cases to vibe check the results. You can find plenty of these vibe results on X and LinkedIn. 
+
+Now folks started talking about "vibe coding": building a piece of software use some AI tool, often with some 
+vague guidelines and most of the times the goal being getting something that "works" where works is very very 
+losely defined. I mean, it is all good fun, and some pretty cool stuff has come out of this. 
+
+But, things can get more serious. There is a ton of AI or "AI" applications out there, in all verticals, cybersecurity 
+included, that claim to perform some function F using AI. It is all great, but it is not quite clear how well
+they are actually implementing F. We all know that cybersecurity is not exactly rife with products with very clear 
+and transparent ways to evaluate their results and as we all say, there is plenty of snake oil out there. 
+
+But this is taking it to the next level. In pre-AI products, at least there was a deterministic logic doing the work. 
+And that work was either bulding some logic to collect and analyze data or some detection logic to find "bad" stuff. 
+Most of the detections were rule based so at least it was easy to review. Limited coverage, maybe too many false 
+positives, but at least the logic was out there, so I (If I was a developer working in the company building the product) 
+could verify it works. I could write a unittest or integration test to make sure that things do not break.
+Life was boring but predictable. 
+
+In the age of AI, all this logic has been thrown to some LLM and anything can come back, often including the 
+expected result. Now it is quite hard to write a unittest or integration test since the results may be slightly 
+different each time. Outsourcing multiple steps of logic to an LLM may result in rare but catastrophic failures. 
+The point is that all these AI based products are **really** hard to test and valiadate. 
+So now I am thinking: given the rate of announcmenets for AI based security products and given how easy it is 
+to build a prorotype (and how hard it is to test it into a product), how many of these products have been
+tested to the (admitedly low in cybesecurity) standards of a pre-AI products. Are these just demos being sold 
+for the price of a real (tested) product? 
+
+I am afraid we may have just entered the age of vibe products.  
