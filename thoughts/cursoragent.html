@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor and its Agent</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <main class="thoughts-container">
+        <article class="thought-post">
+            <header>
+                <h1>Cursor and its Agent</h1>
+                <time datetime="2025-03-23">March 23, 2025</time>
+            </header>
+            
+            <div class="thought-content">
+                <p>Cursor has definitely gotten a lot of attention, one of the fastest growing startups in the recent years and seems that everyone is talking about it, and actually seems that everyone is using it too. I did spend my fair share of time using Cursor, did few vibe projects and experimented with various security tasks and workflows and I can see why the hype. It does actually work.</p>
+
+                <p>I will leave the exact details of my projects for a future post, but it is clear that the power of Cursor lies in its agent. The Cursor folks seem to agree since now the agent is default mode of that magical side panel, and there is no chat anymore. So Cursor has built a state of art coding agent that can accomplish lots of tasks in addition to just "writing code". The magic most likely lies in the context management: how to locate parts of your code that is relevant to what you are trying to do and bring it into the LLM's context window. Cursor seems to be able to do this really well.</p>
+
+                <p>In one of my experiments, I built a VSCode extension that was doing some security stuff and then I wanted my extension to send a request to the agent. Since this extension was 100% vibe coded through Cursor (I literally have no idea how the VSCode extensions work, but Cursor was able to build one without much trouble) I asked Cursor to write me code that handles this request to the agent. Cursor did hallucinate hard on this, coming up with some non-existent APIs. Indeed, as of today, there is no way to send a request to the agent from a VSCode extension. Some random browsing in Reddit showed that some people have brought this up in one way or another but no clear information if there are plans to add such a thing.</p>
+
+                <p>But, in anticipation, imagine this future: If there was a way for a VSCode extension to send a request to the agent, whole application workflows could be built inside cursor trhough extensions. There could be a full security product for example, running inside an extension, running scans, asking the Cursor agent to evaluate the security of new code, asking the Cursor agent to fix issues and so on; all with enough UI to let developers and maybe security folks figure out what is going on and feel they have some amount of control over the AI. A new way of implementing security products will be born overnight.</p>
+
+                <p>An even more interesting option would be to have some kind of "headless" Cursor, where there is no UI, just a light runtime that only runs the agent which can accept requests through REST and has access to your code. Now, you would overnight have another way to implement security projects. As CI action hooks or GitHub apps that accomplish their tasks through the Cursor agent. Again, scanning, security reviews, fixing of issues and anything else that you may want to do, is right there.</p>
+
+                <p>Actually, this whole discussion is not really a Cursor thing, it is more of an agent thing. When powerful agents become available, the way products (security or other) get implemented will change. The UI will become less important and all the elaborate ways to see and do and tweak things from the UI will go away as more and more stuff is handled by the agent(s). Another thing that will go away is the "API first" stuff. It will actually become "tools first" since this is how agents expect to get their data. I am sure you have noticed the MCP craze/excitement these days. Tools are the APIs. Some people say that they are both the same thing (with the tool being a trivial little wrapper around the APIs) but I do not think so. APIs of the old days had the tendency to proliferate and often times provided a lot of unfocused information that was hard to deal with. Wrapping APIs inside tools that will be used by LLMs forces us to re-think what is useful and mission important in these APIs and only serve this through the tools, and this will be a huge improvement going forward.</p>
+            </div>
+        </article>
+    </main>
+</body>
+</html> 
