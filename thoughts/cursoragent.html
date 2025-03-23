@@ -6,7 +6,8 @@
     <title>Cursor and its Agent</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="thoughts-page">
+    <div class="particles"></div>
     <main class="thoughts-container">
         <article class="thought-post">
             <header>
@@ -21,7 +22,7 @@
 
                 <p>In one of my experiments, I built a VSCode extension that was doing some security stuff and then I wanted my extension to send a request to the agent. Since this extension was 100% vibe coded through Cursor (I literally have no idea how the VSCode extensions work, but Cursor was able to build one without much trouble) I asked Cursor to write me code that handles this request to the agent. Cursor did hallucinate hard on this, coming up with some non-existent APIs. Indeed, as of today, there is no way to send a request to the agent from a VSCode extension. Some random browsing in Reddit showed that some people have brought this up in one way or another but no clear information if there are plans to add such a thing.</p>
 
-                <p>But, in anticipation, imagine this future: If there was a way for a VSCode extension to send a request to the agent, whole application workflows could be built inside cursor trhough extensions. There could be a full security product for example, running inside an extension, running scans, asking the Cursor agent to evaluate the security of new code, asking the Cursor agent to fix issues and so on; all with enough UI to let developers and maybe security folks figure out what is going on and feel they have some amount of control over the AI. A new way of implementing security products will be born overnight.</p>
+                <p>But, in anticipation, imagine this future: If there was a way for a VSCode extension to send a request to the agent, whole application workflows could be built inside cursor though extensions. There could be a full security product for example, running inside an extension, running scans, asking the Cursor agent to evaluate the security of new code, asking the Cursor agent to fix issues and so on; all with enough UI to let developers and maybe security folks figure out what is going on and feel they have some amount of control over the AI. A new way of implementing security products will be born overnight.</p>
 
                 <p>An even more interesting option would be to have some kind of "headless" Cursor, where there is no UI, just a light runtime that only runs the agent which can accept requests through REST and has access to your code. Now, you would overnight have another way to implement security projects. As CI action hooks or GitHub apps that accomplish their tasks through the Cursor agent. Again, scanning, security reviews, fixing of issues and anything else that you may want to do, is right there.</p>
 
@@ -29,5 +30,6 @@
             </div>
         </article>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html> 
