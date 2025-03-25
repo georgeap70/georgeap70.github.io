@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do LLMs Generate Insecure Code?</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="thoughts-page">
+    <div class="particles"></div>
+    <main class="thoughts-container">
+        <article class="thought-post">
+            <header>
+                <h1>Do LLMs Generate Insecure Code?</h1>
+                <time datetime="2025-03-24">March 24, 2025</time>
+            </header>
+            
+            <div class="thought-content">
+                <p>There has been lots and lots of discussion on how "llms generate insecure code". This is also a favorite academic topic with lots of research papers published. The results are consistently bad (LLMs do generate insecure code "a lot"). This makes for some pretty good and scary headlines. But let me challenge all that a bit.</p>
+
+                <p>To start with, the way people generate code changes, and changes fast. We have already moved from the LLM era to the agentic era. You do not ask the LLM to give you the response in "single shot"; rather a coding agent will build parts of the code and iterate until more and more of the code gets built. More importantly, the agent will be able to see and fix problems (as in compilation failures or test cases not passing). There is an avalanche of vibe coders building projects with Cursor, Windsurf and other environments that are essentially agents specializing in producing code. Anthropic has released Claude Code, and many other Big Labs may follow.</p>
+
+                <p>So, the question "do LLMs generate insecure code" these days has changed to "do coding agents generate insecure code". If you are following the vibe coders on X you know that indeed, agents do generate insecure code. Lots of horror stories of vibe coders deploying their vibe projects (confusing them for products, but this is a different topic) only for these to be attacked, with keys getting stolen, tokens being abused and so on. But, again, let me challenge all that a bit.</p>
+
+                <p>First a (simplified) overview of application security. The main things to worry about are vulnerabilities in libraries your code is using and defects in your own code. Vulnerabilities in OSS libraries are well known problems in specific versions of the libraries and the solution is to use a different version of the library. Defects in your code are unique to your code and it takes effort to find them. Lots of security products exist trying to find and fix both of these problems.</p>
+
+                <p>When people vibe code, they typically come up with some requirements and ask the system to build the code. And these requirements almost never include generating secure code. Most vibe coders do not know much about code security anyway. But properly prompted, these code generation systems can actually check your code for security issues. I have run quite a few experiments the last few days, and when I give Cursor instructions on how to check my code for security issues it does a pretty decent job. How do I find these instructions? Am I a security expert? I am not, but you can easily compile this list of high level security issues that you need to look for. You can easily browse the Web, or even ask ChatGPT for a checklist of common security issues in frontend or backend applications.</p>
+
+                <p>But what happens when we find these security issues? Well, you can ask Cursor to fix them. And this also works pretty well. So my code generating agent can help me find and fix security issues in my code. Does this solve the problem of using vulnerable libraries? It does not, but Cursor can upgrade libraries to non-vulnerable versions if it has a way to know that the current version used has a vulnerability. Sometimes it can figure it out by running e.g. npm audit. Access to open source vulnerability databases like OSV is one quick MCP server away (who is building that btw?) and then you can ask Cursor to review your dependencies and try to upgrade the versions of the vulnerable ones.</p>
+
+                <p>And this is my challenge: research focuses on how the generated code is insecure, but not on the ability of the code generators to review, identify and fix the issues at subsequent steps of the generation process. The better academic papers do actually consider this as the "oracle" case: you tell your code generator exactly what kind of security issues to look for. When this oracle exists, the security of the generated code improves dramatically. Of course, oracle means unrealistic, but how unrealistic is it in reality? Most of the simple web apps use popular frontend and backend frameworks that typically suffer from well known problems. Creating instructions for which issues to look for in a react frontend or a flask backend is not that hard. Will the final code be 100% secure? Likely not, but it will not be completely broken either.</p>
+
+                <p>And to top it off, you can even ask Cursor to help you with pen-testing your application, to actually verify that your application has security issues and validate their fixes. I experiment with asking Cursor to test my vibe application using curl, to write my frontend tests and it also gave me burp suite commands to try.</p>
+
+                <p>So, turns out that Cursor (and the other agentic code generation platforms) can also moonlight as security experts and dedicated pen-testers. Clearly, we are not there yet, but we are heading there very fast. Recently I have seen folks on X starting to share their own security checklists. Soon there will be very comprehensive security checklists available for all types of projects.</p>
+
+                <p>Vibe coders started to discover application security and are vibe fixing it. And you know what? Eventually, we may end up in a better place than where we are now. Today, even professional developers are not very proficient in security. Most work inside large companies that, let's be honest, do not particularly care about the security of their code and products, unless they are forced by regulation. The suffering of the vibe coders as they learn to properly prompt their coding agents to generate secure code may do much more for increasing security awareness than any corporate security training program.</p>
+            </div>
+        </article>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html> 
